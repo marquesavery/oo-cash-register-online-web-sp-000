@@ -32,12 +32,10 @@ class CashRegister
   end
 
   def void_last_transaction
-    # binding.pry
     @total -= @item_price
-    binding.pry
 
-    if @total == 0.0
-      @item_list = []
+    if @item_list == []
+      @total = 0.0
     end
   end
 
