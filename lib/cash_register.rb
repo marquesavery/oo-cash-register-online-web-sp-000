@@ -34,6 +34,7 @@ class CashRegister
   def void_last_transaction
     # binding.pry
     @total -= @item_price
+    binding.pry
 
     if @total == 0.0
       @item_list = []
