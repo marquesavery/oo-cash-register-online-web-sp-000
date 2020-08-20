@@ -11,7 +11,7 @@ class CashRegister
 
   def add_item(item, price, quantity = 1)
     new_price = price * quantity
-    @item_price = price
+    @item_price = new_price
     @total += new_price
     @item_list.fill(item, item_list.size, quantity)
   end
@@ -33,6 +33,7 @@ class CashRegister
 
   def void_last_transaction
     @total -= @item_price
+
 
     if @item_list == []
       @total = 0.0
