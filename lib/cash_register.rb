@@ -1,7 +1,7 @@
 require 'pry'
 class CashRegister
 
-  attr_accessor :total, :discount, :item_list
+  attr_accessor :total, :discount, :item_list, :@last_item
 
   def initialize(discount = 0)
     @item_list = []
@@ -11,6 +11,7 @@ class CashRegister
 
   def add_item(item, price, quantity = 1)
     new_price = price * quantity
+    @last_item
     @total += new_price
     @item_list.fill(item, item_list.size, quantity)
   end
