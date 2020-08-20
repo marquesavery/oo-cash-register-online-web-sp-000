@@ -35,8 +35,8 @@ class CashRegister
     @total -= @item_price
 
 
-    if @item_list == []
-      @total = 0.0
+    if @total ==0.0
+      @item_list = []
     end
   end
 
